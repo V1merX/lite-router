@@ -17,7 +17,7 @@ class Router {
     function route($url){
         $path = $this->pages[$url];
         $file_directory = "yourfiledir" . $path; // enter file dir.
-        if ($path == '') {
+        if (isset($path)) {
             require "notfound"; // enter your page 404.
             die();
         }
